@@ -7,7 +7,8 @@
     <Authors>Michael J. Currie</Authors>
     <Company>Currie Technologies</Company>
     <Product>Razor.Clipboard</Product>
-    <Description>A Razor class library for interacting with the browser Clipboard API. Use in Server-side Blazor apps.</Description>
+    <Description>A Razor class library for interacting with the browser Clipboard API.
+Use in Server-side Blazor apps.</Description>
     <Copyright>Michael J. Currie</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/Basaingeal/Razor.Clipboard</PackageProjectUrl>
