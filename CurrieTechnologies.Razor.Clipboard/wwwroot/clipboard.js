@@ -108,4 +108,3 @@ window['CurrieTechnologies']['Razor']['Clipboard']['WriteText'] = function (requ
         }
     });
 }); };
-//# sourceMappingURL=clipboard.js.map
