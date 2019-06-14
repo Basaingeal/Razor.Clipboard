@@ -1,0 +1,6 @@
+{
+  "extends": ["tslint:latest"],
+  "rulesDirectory": ["node_modules/tslint-microsoft-contrib"],
+  "rules": {
+  }
+}

@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <Version>0.1.0</Version>
+    <Authors>Michael J. Currie</Authors>
+    <Company>Currie Technologies</Company>
+    <Product>Razor.Clipboard</Product>
+    <Description>A Razor class library for interacting with the browser Clipboard API</Description>
+    <Copyright>Michael J. Currie</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/Basaingeal/Razor.Clipboard</PackageProjectUrl>
+    <PackageIconUrl>https://currietechnologyimages.blob.core.windows.net/logos/logo_v2_128.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/Basaingeal/Razor.Clipboard</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Blazor Clipboard JSInterop Razor</PackageTags>
+    <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+</Project>

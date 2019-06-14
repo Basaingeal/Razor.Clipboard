@@ -1,0 +1,13 @@
+{
+  "name": "currietechnologies-razorclipboard",
+  "version": "0.1.0",
+  "description": "A Blazor component library for interacting with the browser clipboard",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "tslint": "^5.17.0",
+    "typescript": "^3.5.1"
+  },
+  "author": "Michael J. Currie"
+}
