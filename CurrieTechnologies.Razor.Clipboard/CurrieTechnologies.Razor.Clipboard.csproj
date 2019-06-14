@@ -7,7 +7,7 @@
     <Authors>Michael J. Currie</Authors>
     <Company>Currie Technologies</Company>
     <Product>Razor.Clipboard</Product>
-    <Description>A Razor class library for interacting with the browser Clipboard API</Description>
+    <Description>A Razor class library for interacting with the browser Clipboard API. Use in Server-side Blazor apps.</Description>
     <Copyright>Michael J. Currie</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/Basaingeal/Razor.Clipboard</PackageProjectUrl>
@@ -20,11 +20,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="package.json" />
+    <Content Remove="tsconfig.json" />
+    <Content Remove="tslint.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="package.json" />
+    <None Include="tsconfig.json" />
+    <None Include="tslint.json" />
   </ItemGroup>
 
 </Project>
