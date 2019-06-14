@@ -22,7 +22,7 @@ This package provides Blazor applications with access to the browser's [Clipboar
     ```
 3) Add this script tag in  your root html file (Likely _Host.cshtml), right under the `<script src="_framework/blazor.server.js"></script>` tag.
     ```html
-    <script src="_content/currietechnologiesclipboard/clipboard.js"></script>
+    <script src="_content/currietechnologiesrazorclipboard/clipboard.js"></script>
     ```
 
 4) Now you can inject the ClipboardService into any Blazor page and use it like this:
