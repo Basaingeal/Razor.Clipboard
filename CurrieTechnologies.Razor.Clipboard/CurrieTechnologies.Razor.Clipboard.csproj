@@ -1,14 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RazorLangVersion>3.0</RazorLangVersion>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
-    <Version>0.1.0</Version>
+    <Version>0.2.0</Version>
     <Authors>Michael J. Currie</Authors>
     <Company>Currie Technologies</Company>
     <Product>Razor.Clipboard</Product>
     <Description>A Razor class library for interacting with the browser Clipboard API.
-Use in Server-side Blazor apps.</Description>
+Use in both Server-side and Client-side Blazor apps.</Description>
     <Copyright>Michael J. Currie</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/Basaingeal/Razor.Clipboard</PackageProjectUrl>
@@ -16,18 +17,19 @@ Use in Server-side Blazor apps.</Description>
     <RepositoryUrl>https://github.com/Basaingeal/Razor.Clipboard</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Blazor Clipboard JSInterop Razor</PackageTags>
-    <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
+    <PackageReleaseNotes>
+    Switched to .NET Standard.
+    Supports Client-side and Server-side Blazor.
+    Script tag update necessary
+    </PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="package-lock.json" />
     <Content Remove="package.json" />
     <Content Remove="tsconfig.json" />
     <Content Remove="tslint.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,9 +37,14 @@ Use in Server-side Blazor apps.</Description>
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="package-lock.json" />
     <None Include="package.json" />
     <None Include="tsconfig.json" />
     <None Include="tslint.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.0.0-preview7.19365.7" />
   </ItemGroup>
 
 </Project>

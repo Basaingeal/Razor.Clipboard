@@ -34,77 +34,86 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var _this = this;
-var assemblyName = 'CurrieTechnologies.Razor.Clipboard';
-var namespace = 'CurrieTechnologies.Razor.Clipboard';
-function dispatchResponse(id, text) {
-    return __awaiter(this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0: return [4 /*yield*/, DotNet.invokeMethodAsync(namespace, 'ReceiveResponse', id, text)];
-                case 1:
-                    _a.sent();
-                    return [2 /*return*/];
+var CurrieTechnologies;
+(function (CurrieTechnologies) {
+    var Razor;
+    (function (Razor) {
+        var Clipboard;
+        (function (Clipboard) {
+            var _this = this;
+            var assemblyName = "CurrieTechnologies.Razor.Clipboard";
+            var namespace = "CurrieTechnologies.Razor.Clipboard";
+            function dispatchResponse(id, text) {
+                return __awaiter(this, void 0, void 0, function () {
+                    return __generator(this, function (_a) {
+                        switch (_a.label) {
+                            case 0: return [4 /*yield*/, DotNet.invokeMethodAsync(namespace, "ReceiveResponse", id, text)];
+                            case 1:
+                                _a.sent();
+                                return [2 /*return*/];
+                        }
+                    });
+                });
             }
-        });
-    });
-}
-function dispatchWriteResponse(id) {
-    return __awaiter(this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0: return [4 /*yield*/, DotNet.invokeMethodAsync(namespace, 'ReceiveWriteResponse', id)];
-                case 1:
-                    _a.sent();
-                    return [2 /*return*/];
+            function dispatchWriteResponse(id) {
+                return __awaiter(this, void 0, void 0, function () {
+                    return __generator(this, function (_a) {
+                        switch (_a.label) {
+                            case 0: return [4 /*yield*/, DotNet.invokeMethodAsync(namespace, "ReceiveWriteResponse", id)];
+                            case 1:
+                                _a.sent();
+                                return [2 /*return*/];
+                        }
+                    });
+                });
             }
-        });
-    });
-}
-window['CurrieTechnologies'] = window['CurrieTechnologies'] || {};
-window['CurrieTechnologies']['Razor'] =
-    window['CurrieTechnologies']['Razor'] || {};
-window['CurrieTechnologies']['Razor']['Clipboard'] =
-    window['CurrieTechnologies']['Razor']['Clipboard'] || {};
-window['CurrieTechnologies']['Razor']['Clipboard']['ReadText'] = function (requestId) { return __awaiter(_this, void 0, void 0, function () {
-    var text, e_1, error;
-    return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0:
-                _a.trys.push([0, 3, , 4]);
-                return [4 /*yield*/, window.navigator.clipboard.readText()];
-            case 1:
-                text = _a.sent();
-                return [4 /*yield*/, dispatchResponse(requestId, text)];
-            case 2:
-                _a.sent();
-                return [3 /*break*/, 4];
-            case 3:
-                e_1 = _a.sent();
-                error = e_1;
-                return [2 /*return*/, error.message];
-            case 4: return [2 /*return*/, ''];
-        }
-    });
-}); };
-window['CurrieTechnologies']['Razor']['Clipboard']['WriteText'] = function (requestId, textToWrite) { return __awaiter(_this, void 0, void 0, function () {
-    var e_2, error;
-    return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0:
-                _a.trys.push([0, 3, , 4]);
-                return [4 /*yield*/, window.navigator.clipboard.writeText(textToWrite)];
-            case 1:
-                _a.sent();
-                return [4 /*yield*/, dispatchWriteResponse(requestId)];
-            case 2:
-                _a.sent();
-                return [3 /*break*/, 4];
-            case 3:
-                e_2 = _a.sent();
-                error = e_2;
-                return [2 /*return*/, error.message];
-            case 4: return [2 /*return*/, ''];
-        }
-    });
-}); };
+            window["CurrieTechnologies"] = window["CurrieTechnologies"] || {};
+            window["CurrieTechnologies"]["Razor"] =
+                window["CurrieTechnologies"]["Razor"] || {};
+            window["CurrieTechnologies"]["Razor"]["Clipboard"] =
+                window["CurrieTechnologies"]["Razor"]["Clipboard"] || {};
+            window["CurrieTechnologies"]["Razor"]["Clipboard"]["ReadText"] = function (requestId) { return __awaiter(_this, void 0, void 0, function () {
+                var text, e_1, error;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0:
+                            _a.trys.push([0, 3, , 4]);
+                            return [4 /*yield*/, window.navigator.clipboard.readText()];
+                        case 1:
+                            text = _a.sent();
+                            return [4 /*yield*/, dispatchResponse(requestId, text)];
+                        case 2:
+                            _a.sent();
+                            return [3 /*break*/, 4];
+                        case 3:
+                            e_1 = _a.sent();
+                            error = e_1;
+                            return [2 /*return*/, error.message];
+                        case 4: return [2 /*return*/, ""];
+                    }
+                });
+            }); };
+            window["CurrieTechnologies"]["Razor"]["Clipboard"]["WriteText"] = function (requestId, textToWrite) { return __awaiter(_this, void 0, void 0, function () {
+                var e_2, error;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0:
+                            _a.trys.push([0, 3, , 4]);
+                            return [4 /*yield*/, window.navigator.clipboard.writeText(textToWrite)];
+                        case 1:
+                            _a.sent();
+                            return [4 /*yield*/, dispatchWriteResponse(requestId)];
+                        case 2:
+                            _a.sent();
+                            return [3 /*break*/, 4];
+                        case 3:
+                            e_2 = _a.sent();
+                            error = e_2;
+                            return [2 /*return*/, error.message];
+                        case 4: return [2 /*return*/, ""];
+                    }
+                });
+            }); };
+        })(Clipboard = Razor.Clipboard || (Razor.Clipboard = {}));
+    })(Razor = CurrieTechnologies.Razor || (CurrieTechnologies.Razor = {}));
+})(CurrieTechnologies || (CurrieTechnologies = {}));
