@@ -1,6 +1,6 @@
 {
   "name": "currietechnologies-razorclipboard",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A Razor Class Library for interacting with the browser clipboard",
   "scripts": {
     "build": "tsc"
