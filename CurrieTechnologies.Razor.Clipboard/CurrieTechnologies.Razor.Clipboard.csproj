@@ -3,13 +3,14 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RazorLangVersion>3.0</RazorLangVersion>
-    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
-    <Version>0.2.0</Version>
+    <Version>0.3.0</Version>
     <Authors>Michael J. Currie</Authors>
     <Company>Currie Technologies</Company>
     <Product>Razor.Clipboard</Product>
-    <Description>A Razor class library for interacting with the browser Clipboard API.
-Use in both Server-side and Client-side Blazor apps.</Description>
+    <Description>
+      A Razor class library for interacting with the browser Clipboard API.
+      Use in Blazor Server Apps or Blazor WebAssembly Apps.
+    </Description>
     <Copyright>Michael J. Currie</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/Basaingeal/Razor.Clipboard</PackageProjectUrl>
@@ -18,9 +19,7 @@ Use in both Server-side and Client-side Blazor apps.</Description>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Blazor Clipboard JSInterop Razor</PackageTags>
     <PackageReleaseNotes>
-    Switched to .NET Standard.
-    Supports Client-side and Server-side Blazor.
-    Script tag update necessary
+      Update to .NET Core 3.0 Preview 8
     </PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
@@ -44,7 +43,8 @@ Use in both Server-side and Client-side Blazor apps.</Description>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.0.0-preview7.19365.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.0.0-preview8.19405.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="3.0.0-preview8.19405.7" />
   </ItemGroup>
 
 </Project>
