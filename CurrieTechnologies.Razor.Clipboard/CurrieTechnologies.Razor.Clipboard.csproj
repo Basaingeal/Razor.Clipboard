@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RazorLangVersion>3.0</RazorLangVersion>
-    <Version>0.3.0</Version>
+    <Version>0.4.0</Version>
     <Authors>Michael J. Currie</Authors>
     <Company>Currie Technologies</Company>
     <Product>Razor.Clipboard</Product>
@@ -19,7 +19,7 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>Blazor Clipboard JSInterop Razor</PackageTags>
     <PackageReleaseNotes>
-      Update to .NET Core 3.0 Preview 8
+      Update to .NET Core 3.0 Preview 9
     </PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
