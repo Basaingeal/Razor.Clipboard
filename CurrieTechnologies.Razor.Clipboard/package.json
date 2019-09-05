@@ -6,8 +6,8 @@
     "build": "tsc"
   },
   "devDependencies": {
-    "tslint": "^5.18.0",
-    "typescript": "^3.5.3"
+    "tslint": "^5.19.0",
+    "typescript": "^3.6.2"
   },
   "author": "Michael J. Currie"
 }
