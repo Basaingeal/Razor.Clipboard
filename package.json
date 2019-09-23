@@ -6,6 +6,7 @@
     "build": "SET NODE_ENV=production && webpack -p --color",
     "build:tsc": "tsc",
     "watch": "webpack --watch",
+    "lint": "eslint ./src --ext .ts",
     "prettier:write": "prettier --write ./src/*.ts",
     "prettier:check": "prettier --check ./src/*.ts",
     "babel": "babel ./src/clipboard.ts --out-dir wwwroot --extensions .ts,.tsx"
