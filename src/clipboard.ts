@@ -1,6 +1,6 @@
-declare const DotNet: any;
-
 const namespace = "CurrieTechnologies.Razor.Clipboard";
+
+declare const DotNet: any;
 
 async function dispatchResponse(id: string, text: string): Promise<void> {
   await DotNet.invokeMethodAsync(namespace, "ReceiveResponse", id, text);
