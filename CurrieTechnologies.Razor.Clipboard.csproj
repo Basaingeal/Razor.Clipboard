@@ -20,7 +20,6 @@
     <PackageReleaseNotes>
       Update to .NET Core 3.0 RC1
     </PackageReleaseNotes>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
