@@ -11,8 +11,7 @@ async function dispatchWriteResponse(id: string): Promise<void> {
 }
 
 window["CurrieTechnologies"] = window["CurrieTechnologies"] || {};
-window["CurrieTechnologies"]["Razor"] =
-  window["CurrieTechnologies"]["Razor"] || {};
+window["CurrieTechnologies"]["Razor"] = window["CurrieTechnologies"]["Razor"] || {};
 window["CurrieTechnologies"]["Razor"]["Clipboard"] =
   window["CurrieTechnologies"]["Razor"]["Clipboard"] || {};
 
