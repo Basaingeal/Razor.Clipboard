@@ -6,9 +6,15 @@
     "build": "tsc",
     "lint": "eslint ./src --ext .ts",
     "prettier:write": "prettier --write ./src/*.ts",
-    "prettier:check": "prettier --check ./src/*.ts"
+    "prettier:check": "prettier --check ./src/*.ts",
+    "babel": "babel ./src/clipboard.ts --out-dir wwwroot --extensions .ts,.tsx"
   },
   "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-typescript": "^7.6.0",
+    "@types/node": "^12.7.5",
     "@typescript-eslint/eslint-plugin": "^2.3.0",
     "@typescript-eslint/parser": "^2.3.0",
     "eslint": "^6.4.0",
@@ -16,5 +22,13 @@
     "prettier": "^1.18.2",
     "typescript": "^3.6.3"
   },
+  "browserslist": [
+    "chrome 66",
+    "firefox 63",
+    "opera 53",
+    "and_chr 76",
+    "and_ff 68",
+    "samsung 9.2"
+  ],
   "author": "Michael J. Currie"
 }
