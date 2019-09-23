@@ -18,7 +18,7 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>Blazor Clipboard JSInterop Razor</PackageTags>
     <PackageReleaseNotes>
-      Update to .NET Core 3.0 RC1
+      Target .NET Core 3.0.100
     </PackageReleaseNotes>
   </PropertyGroup>
 
