@@ -30,15 +30,10 @@ namespace CurrieTechnologies.Razor.Clipboard
             var tcs = new TaskCompletionSource<string>();
             var requestId = Guid.NewGuid();
             pendingReadRequests.Add(requestId, tcs);
-            string invokeResponse = await jSRuntime.InvokeAsync<string>("CurrieTechnologies.Razor.Clipboard.ReadText", requestId);
-
-            if (invokeResponse.Length > 0)
-            {
-                pendingReadRequests.Remove(requestId);
-                throw new JSException(invokeResponse);
-            }
-
-            return await tcs.Task;
+            await jSRuntime
+                .InvokeAsync<string>("CurrieTechnologies.Razor.Clipboard.ReadText", requestId)
+                .ConfigureAwait(false);
+            return await tcs.Task.ConfigureAwait(false);
         }
 
         /// <summary>
@@ -53,20 +48,15 @@ namespace CurrieTechnologies.Razor.Clipboard
             var tcs = new TaskCompletionSource<object>();
             var requestId = Guid.NewGuid();
             pendingWriteRequests.Add(requestId, tcs);
-            string invokeResponse = await jSRuntime.InvokeAsync<string>("CurrieTechnologies.Razor.Clipboard.WriteText", requestId, newClipText);
-
-            if (invokeResponse.Length > 0)
-            {
-                pendingWriteRequests.Remove(requestId);
-                throw new JSException(invokeResponse);
-            }
-
-            await tcs.Task;
+            await jSRuntime
+                .InvokeAsync<string>("CurrieTechnologies.Razor.Clipboard.WriteText", requestId, newClipText)
+                .ConfigureAwait(false);
+            await tcs.Task.ConfigureAwait(false);
             return;
         }
 
         [JSInvokable]
-        public static void ReceiveResponse(string id, string text)
+        public static void ReceiveReadResponse(string id, string text)
         {
             TaskCompletionSource<string> pendingTask;
             var idVal = Guid.Parse(id);

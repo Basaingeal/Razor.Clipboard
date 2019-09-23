@@ -2,8 +2,8 @@ const namespace = "CurrieTechnologies.Razor.Clipboard";
 
 declare const DotNet: any;
 
-async function dispatchResponse(id: string, text: string): Promise<void> {
-  await DotNet.invokeMethodAsync(namespace, "ReceiveResponse", id, text);
+async function dispatchReadResponse(id: string, text: string): Promise<void> {
+  await DotNet.invokeMethodAsync(namespace, "ReceiveReadResponse", id, text);
 }
 
 async function dispatchWriteResponse(id: string): Promise<void> {
@@ -17,31 +17,15 @@ window["CurrieTechnologies"]["Razor"]["Clipboard"] =
 
 window["CurrieTechnologies"]["Razor"]["Clipboard"]["ReadText"] = async (
   requestId: string
-): Promise<string> => {
-  try {
-    const text: string = await window.navigator.clipboard.readText();
-    await dispatchResponse(requestId, text);
-  } catch (e) {
-    const error: Error = e as Error;
-
-    return error.message;
-  }
-
-  return "";
+): Promise<void> => {
+  const text: string = await window.navigator.clipboard.readText();
+  await dispatchReadResponse(requestId, text);
 };
 
 window["CurrieTechnologies"]["Razor"]["Clipboard"]["WriteText"] = async (
   requestId: string,
   textToWrite: string
-): Promise<string> => {
-  try {
-    await window.navigator.clipboard.writeText(textToWrite);
-    await dispatchWriteResponse(requestId);
-  } catch (e) {
-    const error: Error = e as Error;
-
-    return error.message;
-  }
-
-  return "";
+): Promise<void> => {
+  await window.navigator.clipboard.writeText(textToWrite);
+  await dispatchWriteResponse(requestId);
 };

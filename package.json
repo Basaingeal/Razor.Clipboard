@@ -1,11 +1,12 @@
 {
   "name": "currietechnologies-razorclipboard",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "description": "A Razor Class Library for interacting with the browser clipboard",
   "scripts": {
     "build": "SET NODE_ENV=production && webpack -p --color",
     "build:tsc": "tsc",
     "watch": "webpack --watch",
+    "lint": "eslint ./src --ext .ts",
     "prettier:write": "prettier --write ./src/*.ts",
     "prettier:check": "prettier --check ./src/*.ts",
     "babel": "babel ./src/clipboard.ts --out-dir wwwroot --extensions .ts,.tsx"
