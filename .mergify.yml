@@ -1,7 +1,7 @@
 pull_request_rules:
   - name: automatic merge on CI success and review - Dependabot
     conditions:
-      - status-success=Basaingeal.Razor.PageVisibility
+      - status-success=Basaingeal.Razor.Clipboard
       - status-success=DeepCode
       - author=dependabot-preview[bot]
       - base=develop
