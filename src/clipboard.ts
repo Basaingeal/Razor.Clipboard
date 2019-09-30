@@ -29,3 +29,8 @@ window["CurrieTechnologies"]["Razor"]["Clipboard"]["WriteText"] = async (
   await window.navigator.clipboard.writeText(textToWrite);
   await dispatchWriteResponse(requestId);
 };
+
+window["CurrieTechnologies"]["Razor"]["Clipboard"]["IsSupported"] = (): boolean =>
+  !!window.navigator.clipboard &&
+  !!window.navigator.clipboard.writeText &&
+  !!window.navigator.clipboard.readText;
