@@ -31,7 +31,7 @@ namespace CurrieTechnologies.Razor.Clipboard
             var requestId = Guid.NewGuid();
             pendingReadRequests.Add(requestId, tcs);
             await jSRuntime
-                .InvokeAsync<string>("CurrieTechnologies.Razor.Clipboard.ReadText", requestId)
+                .InvokeAsync<object>("CurrieTechnologies.Razor.Clipboard.ReadText", requestId)
                 .ConfigureAwait(false);
             return await tcs.Task.ConfigureAwait(false);
         }
@@ -49,10 +49,22 @@ namespace CurrieTechnologies.Razor.Clipboard
             var requestId = Guid.NewGuid();
             pendingWriteRequests.Add(requestId, tcs);
             await jSRuntime
-                .InvokeAsync<string>("CurrieTechnologies.Razor.Clipboard.WriteText", requestId, newClipText)
+                .InvokeAsync<object>("CurrieTechnologies.Razor.Clipboard.WriteText", requestId, newClipText)
                 .ConfigureAwait(false);
             await tcs.Task.ConfigureAwait(false);
             return;
+        }
+
+        /// <summary>
+        /// Detects if the browser supports the Clipboard API.
+        /// </summary>
+        /// <returns>
+        /// A Task which resolves to a boolean stating if the clipboard is supported or not.
+        /// </returns>
+        public Task<bool> IsSupportedAsync()
+        {
+            return jSRuntime.InvokeAsync<bool>("CurrieTechnologies.Razor.Clipboard.IsSupported")
+                .AsTask();
         }
 
         [JSInvokable]
