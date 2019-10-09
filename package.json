@@ -12,7 +12,7 @@
     "babel": "babel ./src/clipboard.ts --out-dir wwwroot --extensions .ts,.tsx"
   },
   "devDependencies": {
-    "@babel/cli": "^7.6.2",
+    "@babel/cli": "^7.6.3",
     "@babel/core": "^7.6.2",
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-typescript": "^7.6.0",
