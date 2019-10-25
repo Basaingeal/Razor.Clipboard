@@ -21,7 +21,7 @@
     "@typescript-eslint/parser": "^2.5.0",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
-    "eslint": "^6.5.1",
+    "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.4.0",
     "prettier": "^1.18.2",
     "terser-webpack-plugin": "^2.2.1",
