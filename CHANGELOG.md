@@ -1,6 +1,4 @@
-# v1.1.0
+# v1.2.0
 
-## Enhancements
-
-* New `IsSupportedAsync()` function for detecting browser support.
-* New browser compatibility table in the [README](README.md).
+- bump `Microsoft.AspNetCore.Components` to `3.1.0`
+- bump `Microsoft.AspNetCore.Components.Web` to `3.1.0`
