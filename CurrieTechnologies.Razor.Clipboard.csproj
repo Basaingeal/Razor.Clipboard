@@ -18,7 +18,8 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>Blazor Clipboard JSInterop Razor</PackageTags>
     <PackageReleaseNotes>
-      Add IsSupportedAsync()
+      bump Microsoft.AspNetCore.Components
+      bump Microsoft.AspNetCore.Components.Web
     </PackageReleaseNotes>
   </PropertyGroup>
 
@@ -41,8 +42,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="3.1.0" />
   </ItemGroup>
 
 </Project>
