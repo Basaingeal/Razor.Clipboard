@@ -1,6 +1,6 @@
 {
   "name": "currietechnologies-razorclipboard",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A Razor Class Library for interacting with the browser clipboard",
   "scripts": {
     "build": "SET NODE_ENV=production && webpack -p --color",

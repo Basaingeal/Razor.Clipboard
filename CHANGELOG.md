@@ -1,4 +1,4 @@
-# v1.2.0
+# v1.2.1
 
-- bump `Microsoft.AspNetCore.Components` to `3.1.0`
-- bump `Microsoft.AspNetCore.Components.Web` to `3.1.0`
+- bump `Microsoft.AspNetCore.Components` to `3.1.1`
+- bump `Microsoft.AspNetCore.Components.Web` to `3.1.1`
