@@ -49,7 +49,7 @@ This package provides Blazor applications with access to the browser's [Clipboar
 
 | Chrome | Edge Legacy | Edge (Chromium) | Firefox |  IE   | Opera  | Safari |
 | :----: | :---------: | :-------------: | :-----: | :---: | :----: | :----: |
-| ✔️ 63+ |      ❌      |       ✔️        |   ❌\*   |   ❌   | ✔️ 53+ |   ❔    |
+| ✔️ 63+ |      ❌      |       ✔️        |   ❌\*   |   ❌   | ✔️ 53+ |   ✔️    |
 
 _\* Firefox does support the clipboard API, but in a very restricted way that Blazor doesn't support._
 
@@ -64,4 +64,5 @@ The Clipboard API is a relatively new API and presents some security concerns, s
 ### References
 
 [Unblocking Clipboard Access](https://developers.google.com/web/updates/2018/03/clipboardapi)
+
 [Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API)
