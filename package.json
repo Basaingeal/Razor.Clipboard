@@ -31,10 +31,13 @@
   },
   "browserslist": [
     "chrome 66",
+    "edge 79",
     "firefox 63",
     "opera 53",
-    "and_chr 76",
-    "and_ff 68",
+    "safari 13.1",
+    "and_chr 66",
+    "and_ff 63",
+    "ios_saf 13.4",
     "samsung 9.2"
   ],
   "author": "Michael J. Currie"
