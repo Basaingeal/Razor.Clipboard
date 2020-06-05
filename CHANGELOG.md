@@ -1,4 +1,4 @@
-# v1.2.3
+# v1.3.0
 
-- bump `Microsoft.AspNetCore.Components` to `3.1.4`
-- bump `Microsoft.AspNetCore.Components.Web` to `3.1.4`
+- Add support for Safari 13.1+ 
+- Add support for mobile versions of all supported desktop browsers
