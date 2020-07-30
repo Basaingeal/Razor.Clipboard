@@ -2,7 +2,7 @@
 
 This package provides Blazor applications with access to the browser's [Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard)
 
-## This package is for Blazor Server Apps and Blazor WebAssembly Apps. [CurrieTechnologies.Blazor.Clipboard](https://github.com/Basaingeal/Blazor.Clipboard) is now deprecated.
+## This package is for Blazor Server Apps and Blazor WebAssembly Apps. It should be used instead of [CurrieTechnologies.Blazor.Clipboard](https://github.com/Basaingeal/Blazor.Clipboard) which is now deprecated.
 
 ## Usage
 
