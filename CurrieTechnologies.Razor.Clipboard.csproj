@@ -18,8 +18,8 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>Blazor Clipboard JSInterop Razor</PackageTags>
     <PackageReleaseNotes>
-      Add support for Safari 13.1+ 
-      Add support for mobile versions of all supported desktop browsers
+      bump Microsoft.AspNetCore.Components to 3.1.6
+      bump Microsoft.AspNetCore.Components.Web to 3.1.6
     </PackageReleaseNotes>
   </PropertyGroup>
 
@@ -42,8 +42,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.1.4" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="3.1.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.1.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="3.1.6" />
   </ItemGroup>
 
 </Project>
