@@ -22,7 +22,7 @@
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "eslint": "^7.9.0",
-    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-prettier": "^6.12.0",
     "prettier": "^2.1.2",
     "terser-webpack-plugin": "^4.2.2",
     "typescript": "^4.0.3",
