@@ -1,0 +1,53 @@
+version: 2
+updates:
+- package-ecosystem: nuget
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: Microsoft.AspNetCore.Components
+    versions:
+    - 5.0.2
+    - 5.0.3
+    - 5.0.4
+  - dependency-name: Microsoft.AspNetCore.Components.Web
+    versions:
+    - 5.0.2
+    - 5.0.3
+    - 5.0.4
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: eslint-config-prettier
+    versions:
+    - 8.0.0
+    - 8.1.0
+    - 8.2.0
+  - dependency-name: webpack-cli
+    versions:
+    - 4.4.0
+    - 4.5.0
+    - 4.5.0
+    - 4.6.0
+    - 4.6.0
+    - 4.6.0
+    - 4.6.0
+  - dependency-name: webpack
+    versions:
+    - 5.28.0
+    - 5.28.0
+    - 5.30.0
+    - 5.31.0
+    - 5.31.2
+    - 5.35.0
+  - dependency-name: "@typescript-eslint/eslint-plugin"
+    versions:
+    - 4.20.0
+  - dependency-name: "@babel/core"
+    versions:
+    - 7.13.0
+    - 7.13.14
