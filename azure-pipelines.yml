@@ -20,7 +20,7 @@ stages:
         pool:
           vmImage: "windows-latest"
         steps:
-         - task: Npm@1
+          - task: Npm@1
             displayName: "Installing NPM Packages"
             inputs:
               command: install
@@ -54,7 +54,7 @@ stages:
             inputs:
               filePath: "./versioning.ps1"
 
-           - task: Npm@1
+          - task: Npm@1
             displayName: "Installing NPM Packages"
             inputs:
               command: "install"
@@ -66,10 +66,10 @@ stages:
               customCommand: "run build"
 
           - task: UseDotNet@2
-            displayName: 'Use .NET Core sdk'
+            displayName: "Use .NET Core sdk"
             inputs:
-              packageType: 'sdk'
-              version: '6.0.x'
+              packageType: "sdk"
+              version: "6.0.x"
               includePreviewVersions: true
 
           - task: DotNetCoreCLI@2
@@ -115,7 +115,6 @@ stages:
           runOnce:
             deploy:
               steps:
-
                 - task: GitHubRelease@1
                   displayName: Create GitHub Release
                   inputs:
@@ -139,7 +138,6 @@ stages:
           runOnce:
             deploy:
               steps:
-
                 - task: DotNetCoreCLI@2
                   displayName: "Push to Private NuGet Feed"
                   inputs:
@@ -157,7 +155,6 @@ stages:
           runOnce:
             deploy:
               steps:
-
                 - task: NuGetCommand@2
                   displayName: Push to NuGet.org
                   inputs:
