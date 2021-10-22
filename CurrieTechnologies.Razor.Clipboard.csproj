@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>net6.0;net5.0;netcoreapp3.1;netstandard2.0;</TargetFrameworks>
     <RazorLangVersion>3.0</RazorLangVersion>
     <Authors>Michael J. Currie</Authors>
     <Company>Currie Technologies</Company>
@@ -13,21 +13,19 @@
     <Copyright>Michael J. Currie</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/Basaingeal/Razor.Clipboard</PackageProjectUrl>
-    <PackageIconUrl>https://currietechnologyimages.blob.core.windows.net/logos/logo_v2_128.png</PackageIconUrl>
+    <PackageIcon>logo_v2_128.png</PackageIcon>
     <RepositoryUrl>https://github.com/Basaingeal/Razor.Clipboard</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Blazor Clipboard JSInterop Razor</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
-      bump Microsoft.AspNetCore.Components to 3.1.6
-      bump Microsoft.AspNetCore.Components.Web to 3.1.6
+      enable multi-targetting
     </PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="package-lock.json" />
     <Content Remove="package.json" />
     <Content Remove="tsconfig.json" />
-    <Content Remove="tslint.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,15 +33,37 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="package-lock.json" />
     <None Include="package.json" />
     <None Include="tsconfig.json" />
-    <None Include="tslint.json" />
+    <None Include="logo_v2_128.png" Pack="true" PackagePath="\"/>
+    <None Include="README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.1.6" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="3.1.6" />
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="5.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="[3.1.0, 5.0.0)" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="[3.1.0, 5.0.0)" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="[3.1.0, 5.0.0)" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="[3.1.0, 5.0.0)" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="[5.0.0, 6.0.0)" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="[5.0.0, 6.0.0)" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="[6.0.0-rc.2.21480.10, 7.0.0)" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="[6.0.0-rc.2.21480.10, 7.0.0)" />
   </ItemGroup>
 
 </Project>
