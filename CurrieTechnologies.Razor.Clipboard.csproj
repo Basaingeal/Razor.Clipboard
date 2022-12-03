@@ -1,62 +1,69 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
-  <PropertyGroup>
-    <TargetFrameworks>net7.0;net6.0;netcoreapp3.1;netstandard2.0;</TargetFrameworks>
-    <RazorLangVersion>3.0</RazorLangVersion>
-    <Authors>Michael J. Currie</Authors>
-    <Company>Currie Technologies</Company>
-    <Product>Razor.Clipboard</Product>
-    <Description>
-      A Razor class library for interacting with the browser Clipboard API.
-      Use in Blazor Server Apps or Blazor WebAssembly Apps.
-    </Description>
-    <Copyright>Michael J. Currie</Copyright>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/Basaingeal/Razor.Clipboard</PackageProjectUrl>
-    <PackageIcon>logo_v2_128.png</PackageIcon>
-    <RepositoryUrl>https://github.com/Basaingeal/Razor.Clipboard</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageTags>Blazor Clipboard JSInterop Razor</PackageTags>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageReleaseNotes>
-      enable multi-targetting
-    </PackageReleaseNotes>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFrameworks>net7.0;net6.0;netcoreapp3.1;netstandard2.0;</TargetFrameworks>
+		<RazorLangVersion>3.0</RazorLangVersion>
+		<Authors>Michael J. Currie</Authors>
+		<Company>Currie Technologies</Company>
+		<Product>Razor.Clipboard</Product>
+		<Description>
+			A Razor class library for interacting with the browser Clipboard API.
+			Use in Blazor Server Apps or Blazor WebAssembly Apps.
+		</Description>
+		<Copyright>Michael J. Currie</Copyright>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/Basaingeal/Razor.Clipboard</PackageProjectUrl>
+		<PackageIcon>logo_v2_128.png</PackageIcon>
+		<RepositoryUrl>https://github.com/Basaingeal/Razor.Clipboard</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>Blazor Clipboard JSInterop Razor</PackageTags>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageReleaseNotes>
+			add .NET 7 support
+		</PackageReleaseNotes>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Content Remove="package.json" />
-    <Content Remove="tsconfig.json" />
-  </ItemGroup>
+	<ItemGroup>
+		<Content Remove="package.json" />
+		<Content Remove="tsconfig.json" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\" />
-  </ItemGroup>
+	<ItemGroup>
+		<Folder Include="wwwroot\" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <None Include="package.json" />
-    <None Include="tsconfig.json" />
-    <None Include="logo_v2_128.png" Pack="true" PackagePath="\"/>
-    <None Include="README.md" Pack="true" PackagePath="\"/>
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="package.json" />
+		<None Include="tsconfig.json" />
+		<None Include="logo_v2_128.png" Pack="true" PackagePath="\" />
+		<None Include="README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="[3.1.0, 5.0.0)" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="[3.1.0, 5.0.0)" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="[7.0.0-preview1.*, 8.0.0)">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="[3.1.0, 5.0.0)" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="[3.1.0, 5.0.0)" />
-  </ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+		<PackageReference Include="Microsoft.AspNetCore.Components" Version="3.1.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="3.1.0" />
+	</ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="[6.0.0-rc.2.21480.10, 7.0.0)" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="[6.0.0-rc.2.21480.10, 7.0.0)" />
-  </ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
+		<PackageReference Include="Microsoft.AspNetCore.Components" Version="[3.1.0, 5.0.0)" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="[3.1.0, 5.0.0)" />
+	</ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'net7.0'">
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="[7.0.0-rc.*, 8.0.0)" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="[7.0.0-rc.*, 8.0.0)" />
-  </ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
+		<PackageReference Include="Microsoft.AspNetCore.Components" Version="[6.0.0, 7.0.0)" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="[6.0.0, 7.0.0)" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0'">
+		<PackageReference Include="Microsoft.AspNetCore.Components" Version="[7.0.0, 8.0.0)" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="[7.0.0, 8.0.0)" />
+	</ItemGroup>
 
 </Project>
