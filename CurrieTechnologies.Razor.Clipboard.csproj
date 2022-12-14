@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
 	<PropertyGroup>
-		<TargetFrameworks>net7.0;net6.0;netcoreapp3.1;netstandard2.0;</TargetFrameworks>
+		<TargetFrameworks>net7.0;net6.0;netstandard2.0;</TargetFrameworks>
 		<RazorLangVersion>3.0</RazorLangVersion>
 		<Authors>Michael J. Currie</Authors>
 		<Company>Currie Technologies</Company>
@@ -19,7 +19,7 @@
 		<PackageTags>Blazor Clipboard JSInterop Razor</PackageTags>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageReleaseNotes>
-			add .NET 7 support
+			remove .NET Core 3.1 support
 		</PackageReleaseNotes>
 	</PropertyGroup>
 
@@ -40,7 +40,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="[7.0.0-preview1.*, 8.0.0)">
+		<PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="7.0.*">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
@@ -51,19 +51,14 @@
 		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="3.1.0" />
 	</ItemGroup>
 
-	<ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
-		<PackageReference Include="Microsoft.AspNetCore.Components" Version="[3.1.0, 5.0.0)" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="[3.1.0, 5.0.0)" />
-	</ItemGroup>
-
 	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
-		<PackageReference Include="Microsoft.AspNetCore.Components" Version="[6.0.0, 7.0.0)" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="[6.0.0, 7.0.0)" />
+		<PackageReference Include="Microsoft.AspNetCore.Components" Version="6.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.0" />
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0'">
-		<PackageReference Include="Microsoft.AspNetCore.Components" Version="[7.0.0, 8.0.0)" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="[7.0.0, 8.0.0)" />
+		<PackageReference Include="Microsoft.AspNetCore.Components" Version="7.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.0" />
 	</ItemGroup>
 
 </Project>
