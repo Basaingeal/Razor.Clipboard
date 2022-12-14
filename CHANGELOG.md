@@ -1,10 +1,5 @@
-# v1.5.0
+# v1.6.0
 
-## .NET 7 support
+## Remove explicit .NET Core 3.1 support
 
-.NET 7 is enabled as a framework target.
-
-## Remove .NET 5 support
-
-.NET 5 is no longer explicitly supported as it is EOL.
-The package should still work in .NET 5 apps though as a `netstandard2.0` package.
+This library no longer targets .NET Core 3.1 as it is no longer a supported version of .NET. The library still targets .NET Standard 2.0, so apps that are still on .NET Core 3.1 should still be able to use it.
