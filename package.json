@@ -23,7 +23,7 @@
     "clean-webpack-plugin": "^4.0.0",
     "eslint": "^8.38.0",
     "eslint-config-prettier": "^8.8.0",
-    "prettier": "^2.8.7",
+    "prettier": "^2.8.8",
     "terser-webpack-plugin": "^5.3.7",
     "typescript": "^5.0.4",
     "webpack": "^5.80.0",
